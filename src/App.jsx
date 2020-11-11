@@ -1,7 +1,12 @@
 import React from "react";
 import "./App.css";
 import { ReactComponent as Logo } from "./edited/Logo.svg";
-import useWebAnimations, { fadeInDown, fadeInLeft, flash, jackInTheBox } from "@wellyshen/use-web-animations";
+import useWebAnimations, {
+  fadeInDown,
+  fadeInLeft,
+  flash,
+  jackInTheBox,
+} from "@wellyshen/use-web-animations";
 
 export const App = () => {
   const rh = useWebAnimations({
@@ -42,9 +47,9 @@ export const App = () => {
       iterations: Infinity,
     },
   });
-  const logo = useWebAnimations({...jackInTheBox});
-  const txt = useWebAnimations({...fadeInDown})
-  const sub = useWebAnimations({...fadeInLeft})
+  const logo = useWebAnimations({ ...jackInTheBox });
+  const txt = useWebAnimations({ ...fadeInDown });
+  const sub = useWebAnimations({ ...fadeInLeft });
   return (
     <div className="app">
       <svg
@@ -72,11 +77,13 @@ export const App = () => {
           </ul>
         </nav>
       </header>
-      <div  className="main_txt_container">
+      <div className="main_txt_container">
         <p ref={txt.ref} className="main_txt">
-          We Make it <span> Happen</span>
+          We Make "it" <span> Happen</span>
         </p>
-        <p ref={sub.ref} className="main_sub">WEB Dev | MOBILE Dev | PWA Dev</p>
+        <p ref={sub.ref} className="main_sub">
+          WEB Dev | MOBILE Dev | PWA Dev
+        </p>
       </div>
       <div className="coder">
         <svg
